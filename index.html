@@ -22,7 +22,44 @@
         </ul>
         </div>
     </nav>
+    <nav id ="hamburger-nav">
+    <div class="logo">Ali-Aryo Otufat-Shamsi</div>  <!-- Change logo from my name to a logo of my choice-->
+     <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links"> <!-- Navigation tabs for mobile version, if I change desktop ones, to change these ones too-->
+            <li><a href="#about" onclick="toggleMenu()" >About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+        </div>
+     </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="Ali Profile Picture">  <!-- using defult pfp atm, change to photo of myself asap-->
+         </div>
+         <div class="section__text"> 
+            <p class="section__text__p1">Hello, I'm</p>  <!-- some home page text to edit later-->
+            <h1 class="title">Ali-Aryo Otufat-Shamsi</h1>
+            <p class="section__text__p2">3rd Year Computure Engineering Student</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Resume .pdf')"
+                >Download Resume</button>
+
+                <button class="btn btn-color-1" onclick="location.href='./#contact'"
+                >Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My LinkedIn profile"
+                class="icon" onclick="location.href='https://linkedin.com/'"> <!-- add my own linked in profile url here-->
+            </div>
+        </div>
+    </section>
     <script src="script.js"></script>
-    
 </body>
 </html>
