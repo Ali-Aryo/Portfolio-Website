@@ -451,4 +451,67 @@ footer p{
     text-align: center;
 }
 
-/* Time stamp 1:58:30
+/* */
+
+#typing-container {
+    display: block; /* Ensure it takes up the full width */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    font-family: "Courier New", Courier, monospace; /* Use a monospace font for a typewriter look */
+    font-size: 72px;
+    color: #333;
+    top: 50%;
+    left: 50%;
+    text-align: center; /* Center the text */
+}
+
+.typing-text {
+    margin-top: 4rem;
+    font-family: "Courier New", Courier, monospace; /* Use a monospace font for a typewriter look */
+    font-size: 36px;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 550px; /* Set the maximum width for the typing text */
+    display: inline-block;
+    border-right: 2px solid #333;
+    opacity: 0;
+    animation: 
+        typing 7.5s steps(50, end) forwards 1s,
+        blink 0.75s step-end infinite 1s,
+        fadeIn 0s forwards 1s, /* delay to start  match all delays ^^*/
+        disappear 0s forwards 6s; /* caret disappear after t  match delay^^ */
+
+}
+
+.typing-text2 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 36px;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 770px; /* Set the maximum width for the typing text */
+    display: inline-block;
+    border-right: 2px solid #333;
+    opacity: 0;
+    animation: 
+        typing 7.5s steps(50, end) forwards 6s,
+        blink 0.75s step-end infinite 6s,
+        fadeIn 0s forwards 6s; /* delay to start  match all delays ^^*/
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #333 }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes disappear {
+    to { border-right: none }
+}

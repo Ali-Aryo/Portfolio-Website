@@ -117,3 +117,19 @@
 }
 
 }
+
+
+
+
+
+@media (max-width: 768px) {
+  .typing-container {
+      font-size: 20px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .typing-container {
+      font-size: 16px; /* Adjust font size for even smaller screens */
+  }
+}
