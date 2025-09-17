@@ -19,8 +19,9 @@
         display: none;
     }
     #hamburger-nav{
-    display: flex;
-  }
+        display: flex;
+        justify-content: space-around;
+    }
 
   #experience, .experience-details-container{
     margin-top: 2rem;
@@ -49,6 +50,22 @@
 
   .about-containers{
     margin-top: 0;
+  }
+
+  /* Timeline responsive styles */
+  .timeline-container::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: calc(100% - 60px);
+    left: 60px;
+    text-align: left;
+    padding: 0 20px;
+  }
+
+  .timeline-marker {
+    left: 10px;
   }
 }
 
@@ -115,6 +132,28 @@
 .text-container{
   text-align: justify;
 }
+
+  /* Timeline mobile styles */
+  .timeline-content {
+    padding: 1.5rem;
+  }
+
+  .timeline-title {
+    font-size: 1.25rem;
+  }
+
+  .timeline-company {
+    font-size: 1rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
+  }
+
+  .skill-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
 
 }
 

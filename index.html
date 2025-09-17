@@ -7,51 +7,66 @@
     <title>Ali's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+
 
 </head>
 <!--Body-->
-<body>
+<body class="dark-mode"></body>
 <!--Desktop Navigation-->
     <nav id="desktop-nav">
         <div class="logo">Ali-Aryo Otufat-Shamsi</div>  <!-- Change logo from my name to a logo of my choice-->
-        <div>
+        <div class="nav-right">
             <ul class="nav-links">  <!-- Navigation tabs, can change later-->
-                <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-
-
-        </ul>
+            </ul>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+                <label for="theme-switch" class="theme-switch-label">
+                    <span class="theme-switch-slider"></span>
+                </label>
+            </div>
         </div>
     </nav>
 <!--Hamburger Navigation-->
     <nav id ="hamburger-nav">
     <div class="logo">Ali-Aryo Otufat-Shamsi</div>  <!-- Change logo from my name to a logo of my choice-->
-     <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+     <div class="hamburger-right">
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch-mobile" class="theme-switch-checkbox">
+            <label for="theme-switch-mobile" class="theme-switch-label">
+                <span class="theme-switch-slider"></span>
+            </label>
         </div>
-        <div class="menu-links"> <!-- Navigation tabs for mobile version, if I change desktop ones, to change these ones too-->
-            <li><a href="#about" onclick="toggleMenu()" >About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links"> <!-- Navigation tabs for mobile version, if I change desktop ones, to change these ones too-->
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
 
+            </div>
         </div>
      </div>
     </nav>
 <!--Profile-->
     <section id="profile">
+        <div id="particles-js"></div>
         <div class="section__pic-container">
             <img src="./assets/profile-pic.png" alt="Ali Profile Picture">  
          </div>
          <div class="section__text"> 
             <p class="section__text__p1">Hello, I'm</p>  <!-- some home page text to edit later-->
             <h1 class="title">Ali-Aryo Otufat-Shamsi</h1>
-            <p class="section__text__p2">3rd Year Computure Engineering Student</p>
+            <p class="section__text__p2">4th Year Computure Engineering Student</p>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="window.open('./assets/Resume .pdf')"
                 >Download Resume</button>
@@ -89,19 +104,12 @@
 
         </div>
     </section>
-    </div>
 
-<!--About-->
+<!--About
     <section id="about">
         <p class="section__text__p1">Get To Know More</p>
         <h1 class="title">About Me</h1>
         <div class="section-container">
-            <!-- <div class="section__pic-container">
-               src="assets/c++.jpg" 
-                alt="profile picture" 
-                <img  
-                class="about-pic"/>
-            </div> -->
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-container">
@@ -132,155 +140,71 @@
         onclick="location.href='./#experience'"
         />
     </section>
+    -->
 <!--Experience-->
     <section id="experience">
         <p class="section__text__p1">Explore My</p>
         <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-             <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Software Skills </h2>
-                    <div class="article-container">
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>C++/C</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>HTML/CSS</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Java & JavaScript</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Rust</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Python</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>AI</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
+        <div class="timeline-container">
+            <!-- Timeline Item 1 - Content Development Intern -->
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Sep '24 - Present</div>
+                    <h3 class="timeline-title">Content Development Intern (Tech)</h3>
+                    <p class="timeline-company">UnStop</p>
+                    <ul class="timeline-description">
+                        <li>Curated and crafted 6 - 12 coding challenges daily with the finesse of a quizmaster and the precision of a compiler</li>
+                        <li>Collaborated with backend teams like a bug bounty hunter, eliminating 400+ data related issues in a two week sprint</li>
+                        <li>Transformed abstract concepts into developer-friendly content, marrying technical depth with educational clarity</li>
+                    </ul>
+                    <div class="timeline-skills">
+                        <span class="skill-tag">Inhouse CMS</span>
+                        <span class="skill-tag">Artificial Intelligence</span>
+                        <span class="skill-tag">Code Interpretation</span>
                     </div>
                 </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Hardware Skills </h2>
-                    <div class="article-container">
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Circuits</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Digital Logic</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Microcontroller</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>FPGA</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Signal Processing</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Systems</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
+            </div>
+            
+            <!-- Timeline Item 2 - Graphic Designer -->
+            <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Nov '23 - Dec '24</div>
+                    <h3 class="timeline-title">Graphic Designer</h3>
+                    <p class="timeline-company">Team Negative</p>
+                    <ul class="timeline-description">
+                        <li>Designed scroll-stopping visuals for social media and event promotions</li>
+                        <li>Turned vague design briefs into crisp creative assets—because 'make it pop' is not a real instruction</li>
+                        <li>Blended creativity with speed using Illustrator, Canva, and DaVinci Resolve</li>
+                    </ul>
+                    <div class="timeline-skills">
+                        <span class="skill-tag">Adobe Illustrator</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">daVinci Resolve</span>
                     </div>
                 </div>
-             </div>
+            </div>
+            
+            <!-- Timeline Item 3 - Firmware Developer -->
+            <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2022 - Present</div>
+                    <h3 class="timeline-title">Firmware Developer</h3>
+                    <p class="timeline-company">SFU Robot Soccer Club</p>
+                    <ul class="timeline-description">
+                        <li>Developed firmware for autonomous soccer robots using C/C++ and embedded systems</li>
+                        <li>Implemented motor control, sensor integration, and communication protocols</li>
+                        <li>Collaborated with multidisciplinary team to design and program robot motherboard</li>
+                    </ul>
+                    <div class="timeline-skills">
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Embedded Systems</span>
+                        <span class="skill-tag">Hardware Integration</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
         onclick="location.href='./#projects'"
@@ -373,7 +297,6 @@
         <nav>
             <div class="nav-links-container">
                 <ul class="nav-links">  <!-- Navigation tabs, can change later-->
-                    <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -384,6 +307,17 @@
         </nav>
         <p> Copyright &#169; 2024 Ali-Aryo Otufat-Shamsi. All Rights Reserved.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
