@@ -10,6 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
 
 
 </head>
@@ -202,58 +203,107 @@
     <section id="projects">
         <p class="section__text__p1">My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/mindful memories logo_edited.avif" alt="Project 2" class="project-img">
+        <div class="projects-container">
+            
+                        <!-- Project Card 1 - Mindful Memories -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="0" onclick="openProjectModal('mindful-memories')">
+                <div class="project-card-background bg-gradient-1">
+                    <div class="project-logo-main">
+                        <img src="./assets/mindful memories logo_edited.avif" alt="Mindful Memories Logo">
+                    </div>
                 </div>
-                <h2 class="experience-sub-title project-title"> Mindful Memories</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://gitlab.com/aliaryo2004/mindful-memories'">
-                        GitLab
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://laraclemos.wixsite.com/mindful-memories'">
-                         Info
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/Rust.png" alt="Rust Operating System" class="project-img">
-                </div>
-                <h2 class="experience-sub-title project-title"> Operating System in Rust</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://github.com/Ali-Aryo/Operating-System-in-Rust'">
-                        GitHub
-                    </button>
-                    <!-- </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://github.com/Ali-Aryo'">
-                         Coming Soon (02/2025)
-                    </button> -->
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Mindful Memories</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">MongoDB</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/soon.png" alt="Project 1" class="project-img">
+
+            <!-- Project Card 2 - Operating System in Rust -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="100" onclick="openProjectModal('rust-os')">
+                <div class="project-card-background bg-gradient-2">
+                    <div class="project-logo-main">
+                        <img src="./assets/Rust.png" alt="Rust OS Logo">
+                    </div>
                 </div>
-                <h2 class="experience-sub-title project-title"> AI Fitness Analyzer </h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://github.com/Ali-Aryo/AI-Gym-Rep-Analyzer'">
-                        GitHub
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://github.com/Ali-Aryo'">
-                        Coming Soon (Summer 2025)
-                    </button>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Operating System in Rust</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag">Rust</span>
+                        <span class="project-tag">OS Dev</span>
+                        <span class="project-tag">Kernel</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
+
+            <!-- Project Card 3 - AI Fitness Analyzer -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="200" onclick="openProjectModal('ai-fitness')">
+                <div class="project-card-background bg-gradient-3">
+                    <div class="project-logo-main">
+                        <img src="./assets/soon.png" alt="AI Fitness Logo">
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">AI Fitness Analyzer</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">AI/ML</span>
+                        <span class="project-tag">OpenCV</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
         </div>
+
+        <!-- Project Modal -->
+        <div id="project-modal" class="modal-overlay" onclick="closeProjectModal()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <div class="modal-header">
+                    <h2 id="modal-title">Project Title</h2>
+                    <button class="modal-close" onclick="closeProjectModal()">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img id="modal-image" src="" alt="Project Image">
+                    </div>
+                    <div class="modal-description">
+                        <p id="modal-description">Project description will appear here.</p>
+                        <div id="modal-tags" class="modal-tags"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="modal-github" class="modal-btn btn-github hvr-grow" onclick="">
+                        <span>GitHub</span>
+                    </button>
+                    <button id="modal-demo" class="modal-btn btn-demo hvr-grow" onclick="">
+                        <span>Demo</span>
+                    </button>
+                    <button id="modal-info" class="modal-btn btn-info hvr-grow" onclick="">
+                        <span>Info</span>
+                    </button>
+                </div>
+            </div>
         </div>
 
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"

@@ -137,3 +137,117 @@ function initializeParticles() {
         retina_detect: true
     });
 }
+
+// Project Modal Functionality
+const projectData = {
+    'mindful-memories': {
+        title: 'Mindful Memories',
+        description: 'A comprehensive mental health and wellness application that helps users track their emotional well-being through interactive journaling, mood tracking, and personalized insights. Features include secure data storage, beautiful visualizations, and evidence-based wellness recommendations.',
+        image: './assets/mindful memories logo_edited.avif',
+        tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Mental Health'],
+        github: 'https://gitlab.com/aliaryo2004/mindful-memories',
+        demo: '',
+        info: 'https://laraclemos.wixsite.com/mindful-memories'
+    },
+    'rust-os': {
+        title: 'Operating System in Rust',
+        description: 'A custom operating system kernel built from scratch using Rust programming language. This project demonstrates low-level system programming concepts including memory management, process scheduling, and hardware interaction while leveraging Rust\'s memory safety features.',
+        image: './assets/Rust.png',
+        tags: ['Rust', 'OS Development', 'Kernel', 'System Programming', 'Memory Management'],
+        github: 'https://github.com/Ali-Aryo/Operating-System-in-Rust',
+        demo: '',
+        info: ''
+    },
+    'ai-fitness': {
+        title: 'AI Fitness Analyzer',
+        description: 'An intelligent fitness application that uses computer vision and machine learning to analyze workout forms and provide real-time feedback. Features include pose detection, rep counting, form analysis, and personalized workout recommendations based on user performance.',
+        image: './assets/soon.png',
+        tags: ['Python', 'AI/ML', 'Computer Vision', 'OpenCV', 'TensorFlow'],
+        github: 'https://github.com/Ali-Aryo/AI-Gym-Rep-Analyzer',
+        demo: '',
+        info: ''
+    }
+};
+
+function openProjectModal(projectId) {
+    const project = projectData[projectId];
+    if (!project) return;
+    
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalImage = document.getElementById('modal-image');
+    const modalDescription = document.getElementById('modal-description');
+    const modalTags = document.getElementById('modal-tags');
+    const modalGithub = document.getElementById('modal-github');
+    const modalDemo = document.getElementById('modal-demo');
+    const modalInfo = document.getElementById('modal-info');
+    
+    // Update modal content
+    modalTitle.textContent = project.title;
+    modalImage.src = project.image;
+    modalImage.alt = project.title;
+    modalDescription.textContent = project.description;
+    
+    // Update tags
+    modalTags.innerHTML = '';
+    project.tags.forEach(tag => {
+        const tagElement = document.createElement('span');
+        tagElement.className = 'project-tag';
+        tagElement.textContent = tag;
+        modalTags.appendChild(tagElement);
+    });
+    
+    // Update buttons
+    if (project.github) {
+        modalGithub.style.display = 'inline-block';
+        modalGithub.onclick = () => window.open(project.github, '_blank');
+    } else {
+        modalGithub.style.display = 'none';
+    }
+    
+    if (project.demo) {
+        modalDemo.style.display = 'inline-block';
+        modalDemo.onclick = () => window.open(project.demo, '_blank');
+    } else {
+        modalDemo.style.display = 'none';
+    }
+    
+    if (project.info) {
+        modalInfo.style.display = 'inline-block';
+        modalInfo.onclick = () => window.open(project.info, '_blank');
+    } else {
+        modalInfo.style.display = 'none';
+    }
+    
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('project-modal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside or pressing Escape
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('project-modal');
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeProjectModal();
+            }
+        });
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeProjectModal();
+        }
+    });
+    
+    // Initialize particles
+    initializeParticles();
+});
