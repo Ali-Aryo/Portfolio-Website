@@ -5,6 +5,17 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
+//Scroll Bar
+const scrollProgress = document.getElementById('scroll-progress');
+const height =
+  document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+window.addEventListener('scroll', () => {
+  const scrollTop =
+    document.body.scrollTop || document.documentElement.scrollTop;
+  scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
+});
+// Theme Toggle
 function toggleTheme() {
     const body = document.body;
     const isCurrentlyDark = body.classList.contains('dark-mode');
