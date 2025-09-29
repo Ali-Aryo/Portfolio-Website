@@ -144,26 +144,23 @@ const projectData = {
         title: 'Mindful Memories',
         description: 'Designed and developed an Android application that facilitates reminiscence therapy for individuals with dementia and their caregivers. This solution effectively enhances cognitive engagement and significantly improves their overall quality of life.',
         image: './assets/mindful memories logo_edited.avif',
-        tags: ['Java', 'Android Studio', 'Firebase', 'GitLab', 'Software Engineering'],
         github: 'https://gitlab.com/aliaryo2004/mindful-memories',
-        demo: '',
+        demo: 'https://www.youtube.com/watch?v=0pK_cgNPLDc',
         info: 'https://laraclemos.wixsite.com/mindful-memories'
     },
     'rust-os': {
         title: 'Operating System in Rust',
         description: 'A custom operating system kernel built from scratch using Rust and simulated on bare metal. This project demonstrates low-level system programming concepts including memory management, process scheduling, and hardware interaction while leveraging Rust\'s memory safety features.',
         image: './assets/Rust.png',
-        tags: ['Rust', 'OS Development', 'Kernel', 'System Programming', 'Memory Management'],
         github: 'https://github.com/Ali-Aryo/Operating-System-in-Rust',
         demo: '',
         info: ''
     },
     'ai-fitness': {
-        title: 'AI Fitness Analyzer',
+        title: 'AI Fitness App',
         description: 'An intelligent fitness application that uses computer vision and machine learning to analyze workout forms and provide real-time feedback. Features include pose detection, rep counting, form analysis, and personalized workout recommendations based on user performance.',
         image: './assets/soon.png',
-        tags: ['Python', 'AI/ML', 'Computer Vision', 'OpenCV', 'sikit-learn'],
-        github: 'https://github.com/Ali-Aryo/AI-Gym-Rep-Analyzer',
+        github: 'https://github.com/Ali-Aryo/AI-Fitness-Coach',
         demo: '',
         info: ''
     },
@@ -171,9 +168,8 @@ const projectData = {
         title: 'Phishnet.AI',
         description: 'Trained a machine learning model to detect phishing emails with high accuracy using an open-source dataset, enabling automated classification of malicious messages. Implemented a Support Vector Classifier using scikit-learn and applied TF-IDF vectorization to convert email text into numerical features. Tracked and evaluated model performance using Pandas to iteratively improve classification accuracy.',
         image: './assets/soon.png',
-        tags: ['Python', 'Machine Learning', 'Scikit-learn', 'TF-IDF', 'Pandas', 'SVM'],
-        github: '',
-        demo: '',
+        github: 'https://github.com/Ali-Aryo/PhishNet.AI',
+        demo: 'https://www.youtube.com/watch?v=rXw9ejR7Rac',
         info: ''
     }
 };

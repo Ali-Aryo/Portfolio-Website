@@ -109,42 +109,6 @@
         </div>
     </section>
 
-<!--About
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" 
-                        alt="Experience icon"
-                        class="icon"/>
-                        <h3>Experience</h3>
-                        <p>2.5 years <br>Firmware Developer <br>SFU Robot Soccer Club</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" 
-                        alt="education icon"
-                        class="icon"/>
-                        <h3>Education</h3>
-                        <p>Bachelors of Applied Science (3rd Year) <br> Engineering <br> Computer Engineering</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>My name is Ali-Aryo Otufat-Shamsi, and I am a third-year Computer Engineering student at Simon Fraser University. 
-                       My academic interests include computer architecture, digital systems, software and hardware programming, electrical circuits, and signal processing. 
-                       I am currently a firmware developer for the SFU Robot Soccer Club, where I contribute to programming our teams new motherboard. 
-                       In my free time, I am exploring the fascinating fields of artificial intelligence, including large language models and computer vision, as I work to deepen my knowledge and expand my skill set.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
-        onclick="location.href='./#experience'"
-        />
-    </section>
-    -->
 <!--Experience-->
     <section id="experience">
         <p class="section__text__p1">Explore My</p>
@@ -224,12 +188,35 @@
                     <div class="project-card-footer">
                         <span class="view-details-text">View Details</span>
                         <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="m9 18 6-6-6-6"/>
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
                         </svg>
                     </div>
                 </div>
             </div>
-                        <!-- Project Card 2 - Mindful Memories -->
+               <!-- Project Card 2 - Phishnet.AI -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="300" onclick="openProjectModal('phishnet-ai')">
+                <div class="project-card-background bg-gradient-4">
+                    <div class="project-logo-main">
+                        <img src="./assets/soon.png" alt="Phishnet.AI Logo">
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Phishnet.AI</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag"><img src="./assets/python.png" alt="" class="skill-icon">Python</span>
+                        <span class="project-tag"><img src="./assets/machine_learning.png" alt="" class="skill-icon">Machine Learning</span>
+                        <span class="project-tag"><img src="./assets/python.png" alt="" class="skill-icon">Scikit-learn</span>
+                        <span class="project-tag"><img src="./assets/google.png" alt="" class="skill-icon">Google Colab</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+                        <!-- Project Card 3 - Mindful Memories -->
             <div class="project-card" data-aos="fade-left" data-aos-delay="0" onclick="openProjectModal('mindful-memories')">
                 <div class="project-card-background bg-gradient-1">
                     <div class="project-logo-main">
@@ -242,52 +229,7 @@
                         <span class="project-tag"><img src="./assets/java.png" alt="" class="skill-icon">Java</span>
                         <span class="project-tag"><img src="./assets/android.png" alt="" class="skill-icon">Android Studio</span>
                         <span class="project-tag"><img src="./assets/firebase.png" alt="" class="skill-icon">Firebase</span>
-                    </div>
-                    <div class="project-card-footer">
-                        <span class="view-details-text">View Details</span>
-                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="m9 18 6-6-6-6"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Card 3 - Operating System in Rust -->
-            <div class="project-card" data-aos="fade-left" data-aos-delay="100" onclick="openProjectModal('rust-os')">
-                <div class="project-card-background bg-gradient-2">
-                    <div class="project-logo-main">
-                        <img src="./assets/Rust.png" alt="Rust OS Logo">
-                    </div>
-                </div>
-                <div class="project-card-content">
-                    <h3 class="project-card-title">Operating System in Rust</h3>
-                    <div class="project-card-tags">
-                        <span class="project-tag">Rust</span>
-                        <span class="project-tag">OS Dev</span>
-                        <span class="project-tag">Kernel</span>
-                    </div>
-                    <div class="project-card-footer">
-                        <span class="view-details-text">View Details</span>
-                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="m9 18 6-6-6-6"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>          
-            
-            <!-- Project Card 4 - Phishnet.AI -->
-            <div class="project-card" data-aos="fade-left" data-aos-delay="300" onclick="openProjectModal('phishnet-ai')">
-                <div class="project-card-background bg-gradient-4">
-                    <div class="project-logo-main">
-                        <img src="./assets/soon.png" alt="Phishnet.AI Logo">
-                    </div>
-                </div>
-                <div class="project-card-content">
-                    <h3 class="project-card-title">Phishnet.AI</h3>
-                    <div class="project-card-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">Machine Learning</span>
-                        <span class="project-tag">Scikit-learn</span>
+                        <span class="project-tag"><img src="./assets/canva.png" alt="" class="skill-icon">Canva</span>
                     </div>
                     <div class="project-card-footer">
                         <span class="view-details-text">View Details</span>
@@ -297,6 +239,29 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Project Card 4 - Operating System in Rust -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="100" onclick="openProjectModal('rust-os')">
+                <div class="project-card-background bg-gradient-2">
+                    <div class="project-logo-main">
+                        <img src="./assets/Rust.png" alt="Rust OS Logo">
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Operating System in Rust</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag"><img src="./assets/rust.png" alt="" class="skill-icon">Rust</span>
+                        <span class="project-tag"><img src="./assets/integrated-system.png" alt="" class="skill-icon">Operating Systems</span>
+                        <span class="project-tag"><img src="./assets/stack.png" alt="" class="skill-icon">Memory Management</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>          
         </div>
 
         <!-- Project Modal -->
