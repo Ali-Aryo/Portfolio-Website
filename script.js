@@ -144,7 +144,7 @@ const projectData = {
         title: 'Mindful Memories',
         description: 'Designed and developed an Android application that facilitates reminiscence therapy for individuals with dementia and their caregivers. This solution effectively enhances cognitive engagement and significantly improves their overall quality of life.',
         image: './assets/mindful memories logo_edited.avif',
-        tags: ['Java', 'Android Studio.js', 'Firebase', 'GitLab', 'Software Engineering'],
+        tags: ['Java', 'Android Studio', 'Firebase', 'GitLab', 'Software Engineering'],
         github: 'https://gitlab.com/aliaryo2004/mindful-memories',
         demo: '',
         info: 'https://laraclemos.wixsite.com/mindful-memories'
@@ -186,7 +186,6 @@ function openProjectModal(projectId) {
     const modalTitle = document.getElementById('modal-title');
     const modalImage = document.getElementById('modal-image');
     const modalDescription = document.getElementById('modal-description');
-    const modalTags = document.getElementById('modal-tags');
     const modalGithub = document.getElementById('modal-github');
     const modalDemo = document.getElementById('modal-demo');
     const modalInfo = document.getElementById('modal-info');
@@ -196,15 +195,6 @@ function openProjectModal(projectId) {
     modalImage.src = project.image;
     modalImage.alt = project.title;
     modalDescription.textContent = project.description;
-    
-    // Update tags
-    modalTags.innerHTML = '';
-    project.tags.forEach(tag => {
-        const tagElement = document.createElement('span');
-        tagElement.className = 'project-tag';
-        tagElement.textContent = tag;
-        modalTags.appendChild(tagElement);
-    });
     
     // Update buttons
     if (project.github) {
