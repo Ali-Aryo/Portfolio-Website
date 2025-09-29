@@ -142,16 +142,16 @@ function initializeParticles() {
 const projectData = {
     'mindful-memories': {
         title: 'Mindful Memories',
-        description: 'A comprehensive mental health and wellness application that helps users track their emotional well-being through interactive journaling, mood tracking, and personalized insights. Features include secure data storage, beautiful visualizations, and evidence-based wellness recommendations.',
+        description: 'Designed and developed an Android application that facilitates reminiscence therapy for individuals with dementia and their caregivers. This solution effectively enhances cognitive engagement and significantly improves their overall quality of life.',
         image: './assets/mindful memories logo_edited.avif',
-        tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Mental Health'],
+        tags: ['Java', 'Android Studio.js', 'Firebase', 'GitLab', 'Software Engineering'],
         github: 'https://gitlab.com/aliaryo2004/mindful-memories',
         demo: '',
         info: 'https://laraclemos.wixsite.com/mindful-memories'
     },
     'rust-os': {
         title: 'Operating System in Rust',
-        description: 'A custom operating system kernel built from scratch using Rust programming language. This project demonstrates low-level system programming concepts including memory management, process scheduling, and hardware interaction while leveraging Rust\'s memory safety features.',
+        description: 'A custom operating system kernel built from scratch using Rust and simulated on bare metal. This project demonstrates low-level system programming concepts including memory management, process scheduling, and hardware interaction while leveraging Rust\'s memory safety features.',
         image: './assets/Rust.png',
         tags: ['Rust', 'OS Development', 'Kernel', 'System Programming', 'Memory Management'],
         github: 'https://github.com/Ali-Aryo/Operating-System-in-Rust',
@@ -162,8 +162,17 @@ const projectData = {
         title: 'AI Fitness Analyzer',
         description: 'An intelligent fitness application that uses computer vision and machine learning to analyze workout forms and provide real-time feedback. Features include pose detection, rep counting, form analysis, and personalized workout recommendations based on user performance.',
         image: './assets/soon.png',
-        tags: ['Python', 'AI/ML', 'Computer Vision', 'OpenCV', 'TensorFlow'],
+        tags: ['Python', 'AI/ML', 'Computer Vision', 'OpenCV', 'sikit-learn'],
         github: 'https://github.com/Ali-Aryo/AI-Gym-Rep-Analyzer',
+        demo: '',
+        info: ''
+    },
+    'phishnet-ai': {
+        title: 'Phishnet.AI',
+        description: 'Trained a machine learning model to detect phishing emails with high accuracy using an open-source dataset, enabling automated classification of malicious messages. Implemented a Support Vector Classifier using scikit-learn and applied TF-IDF vectorization to convert email text into numerical features. Tracked and evaluated model performance using Pandas to iteratively improve classification accuracy.',
+        image: './assets/soon.png',
+        tags: ['Python', 'Machine Learning', 'Scikit-learn', 'TF-IDF', 'Pandas', 'SVM'],
+        github: '',
         demo: '',
         info: ''
     }
