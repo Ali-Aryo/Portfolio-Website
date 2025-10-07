@@ -167,10 +167,26 @@ const projectData = {
     'phishnet-ai': {
         title: 'Phishnet.AI',
         description: 'Trained a machine learning model to detect phishing emails with high accuracy using an open-source dataset, enabling automated classification of malicious messages. Implemented a Support Vector Classifier using scikit-learn and applied TF-IDF vectorization to convert email text into numerical features. Tracked and evaluated model performance using Pandas to iteratively improve classification accuracy.',
-        image: './assets/soon.png',
+        image: './assets/phishnet-ai.png',
         github: 'https://github.com/Ali-Aryo/PhishNet.AI',
         demo: 'https://www.youtube.com/watch?v=rXw9ejR7Rac',
         info: ''
+    },
+    'csv-rag': {
+        title: 'CSV RAG',
+        description: 'Developed a web-based chatbot using LangChain Agents and Large Language Models via API to enable users to ask questions about their data. Built an intuitive user interface with drag-and-drop functionality that allows users to upload CSV files and interact with their data through conversational queries, making data analysis accessible without technical expertise.',
+        image: './assets/csv_rag.png',
+        github: 'https://github.com/Ali-Aryo/RAG-Ask-Your-CSV',
+        demo: '',
+        info: ''
+    },
+    'portfolio-website': {
+        title: 'Portfolio Website',
+        description: 'Developed a personal portfolio website to showcase my projects and skills. The website features a modern design, responsive layout, animations, and interactive elements to enhance user experience.',
+        image: './assets/profile-pic.png',
+        github: 'https://github.com/Ali-Aryo/Portfolio-Website',
+        demo: '',
+        info: 'https://ali-shamsi-dev.netlify.app/'
     }
 };
 

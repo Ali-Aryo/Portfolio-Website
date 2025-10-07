@@ -681,8 +681,8 @@ body.dark-mode .project-card:hover {
 }
 
 .project-logo-main {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 20px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.15);
