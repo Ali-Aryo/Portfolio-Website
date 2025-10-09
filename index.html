@@ -7,51 +7,69 @@
     <title>Ali's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
 
 </head>
+<!--Scroll Bar-->
+<div id="scroll-progress"></div>
+<p class = "scroll-progress"></p>
 <!--Body-->
-<body>
+<body class="dark-mode"></body>
 <!--Desktop Navigation-->
     <nav id="desktop-nav">
-        <div class="logo">Ali-Aryo Otufat-Shamsi</div>  <!-- Change logo from my name to a logo of my choice-->
-        <div>
+        <div class="nav-center">
             <ul class="nav-links">  <!-- Navigation tabs, can change later-->
-                <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-
-
-        </ul>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+                <label for="theme-switch" class="theme-switch-label">
+                    <span class="theme-switch-slider"></span>
+                </label>
+            </div>
         </div>
     </nav>
 <!--Hamburger Navigation-->
     <nav id ="hamburger-nav">
-    <div class="logo">Ali-Aryo Otufat-Shamsi</div>  <!-- Change logo from my name to a logo of my choice-->
-     <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+     <div class="hamburger-right">
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch-mobile" class="theme-switch-checkbox">
+            <label for="theme-switch-mobile" class="theme-switch-label">
+                <span class="theme-switch-slider"></span>
+            </label>
         </div>
-        <div class="menu-links"> <!-- Navigation tabs for mobile version, if I change desktop ones, to change these ones too-->
-            <li><a href="#about" onclick="toggleMenu()" >About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links"> <!-- Navigation tabs for mobile version, if I change desktop ones, to change these ones too-->
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
 
+            </div>
         </div>
      </div>
     </nav>
 <!--Profile-->
     <section id="profile">
+        <div id="particles-js"></div>
         <div class="section__pic-container">
             <img src="./assets/profile-pic.png" alt="Ali Profile Picture">  
          </div>
          <div class="section__text"> 
-            <p class="section__text__p1">Hello, I'm</p>  <!-- some home page text to edit later-->
-            <h1 class="title">Ali-Aryo Otufat-Shamsi</h1>
-            <p class="section__text__p2">3rd Year Computure Engineering Student</p>
+            <p id="companionMethods"></p>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="window.open('./assets/Resume .pdf')"
                 >Download Resume</button>
@@ -77,277 +95,237 @@
                     onclick= "location.href = 'https://gitlab.com/aliaryo2004'">
             </div>
 
-            <div class="typing-container">
-                <p class="typing-text">Welcome to my portfolio!
-                </p>
-            </div>
-
-            <div class="typing-container">
-                <p class="typing-text2">Take a look at my featured projects!
-                </p>
-            </div>
-
         </div>
     </section>
-    </div>
 
-<!--About-->
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <!-- <div class="section__pic-container">
-               src="assets/c++.jpg" 
-                alt="profile picture" 
-                <img  
-                class="about-pic"/>
-            </div> -->
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" 
-                        alt="Experience icon"
-                        class="icon"/>
-                        <h3>Experience</h3>
-                        <p>2.5 years <br>Firmware Developer <br>SFU Robot Soccer Club</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" 
-                        alt="education icon"
-                        class="icon"/>
-                        <h3>Education</h3>
-                        <p>Bachelors of Applied Science (3rd Year) <br> Engineering <br> Computer Engineering</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>My name is Ali-Aryo Otufat-Shamsi, and I am a third-year Computer Engineering student at Simon Fraser University. 
-                       My academic interests include computer architecture, digital systems, software and hardware programming, electrical circuits, and signal processing. 
-                       I am currently a firmware developer for the SFU Robot Soccer Club, where I contribute to programming our teams new motherboard. 
-                       In my free time, I am exploring the fascinating fields of artificial intelligence, including large language models and computer vision, as I work to deepen my knowledge and expand my skill set.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
-        onclick="location.href='./#experience'"
-        />
-    </section>
 <!--Experience-->
     <section id="experience">
         <p class="section__text__p1">Explore My</p>
         <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-             <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Software Skills </h2>
-                    <div class="article-container">
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>C++/C</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>HTML/CSS</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Java & JavaScript</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Rust</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Python</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>AI</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
+        <div class="timeline-container">
+            <!-- Timeline Item 1 - TELUS Intern -->
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">May '25 - Dec '25</div>
+                    <h3 class="timeline-title">Software Engineer (co-op)</h3>
+                    <p class="timeline-company">TELUS</p>
+                    <ul class="timeline-description">
+                        <li>Increased team efficiency by creating a Python command line tool to automate repetitive Looker reporting tasks.</li>
+                        <li>Ensured secure data protection by automating daily client data backups to Google Cloud Storage using a Python cloud function and Terraform.</li>
+                        <li>Improved team collaboration by authoring clear documentation on Git workflows leading to an organized standard in the teams workflow.</li>
+                    </ul>
+                    <div class="timeline-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Google Cloud Platform</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Looker</span>
+                        <span class="skill-tag">JIRA</span>
+
                     </div>
                 </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Hardware Skills </h2>
-                    <div class="article-container">
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Circuits</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Digital Logic</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Microcontroller</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>FPGA</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Signal Processing</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/checkmark.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Systems</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
+            </div>
+
+            <!-- Timeline Item 2 - Firmware Developer -->
+            <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Sep '22  - Present</div>
+                    <h3 class="timeline-title">Firmware Developer</h3>
+                    <p class="timeline-company">SFU Robot Soccer Club</p>
+                    <ul class="timeline-description">
+                        <li>Developed firmware for autonomous soccer robots using C/C++ and embedded systems</li>
+                        <li>Implemented motor control, sensor integration, and communication protocols</li>
+                        <li>Collaborated with multidisciplinary team to design and program robot motherboard</li>
+                    </ul>
+                    <div class="timeline-skills">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Embedded Systems</span>
+                        <span class="skill-tag">Hardware Integration</span>
+                        <span class="skill-tag">GitLab</span>
                     </div>
                 </div>
-             </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
-        onclick="location.href='./#projects'"
-        />
+            </div>
     </section>
 <!--Projects-->
     <section id="projects">
         <p class="section__text__p1">My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/mindful memories logo_edited.avif" alt="Project 2" class="project-img">
+        <div class="projects-container">
+
+              <!-- Project Card 1 - AI Fitness Analyzer -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="200" onclick="openProjectModal('ai-fitness')">
+                <div class="project-card-background bg-gradient-3">
+                    <div class="project-logo-main">
+                        <img src="./assets/soon.png" alt="AI Fitness Logo">
+                    </div>
                 </div>
-                <h2 class="experience-sub-title project-title"> Mindful Memories</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://gitlab.com/aliaryo2004/mindful-memories'">
-                        GitLab
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://laraclemos.wixsite.com/mindful-memories'">
-                         Info
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/Rust.png" alt="Rust Operating System" class="project-img">
-                </div>
-                <h2 class="experience-sub-title project-title"> Operating System in Rust</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://github.com/Ali-Aryo/Operating-System-in-Rust'">
-                        GitHub
-                    </button>
-                    <!-- </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://github.com/Ali-Aryo'">
-                         Coming Soon (02/2025)
-                    </button> -->
+                <div class="project-card-content">
+                    <h3 class="project-card-title">AI Fitness App</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag"><img src="./assets/python.png" alt="" class="skill-icon">Python</span>
+                        <span class="project-tag"><img src="./assets/ai.png" alt="" class="skill-icon">AI/ML</span>
+                        <span class="project-tag"><img src="./assets/react.png" alt="" class="skill-icon">React Native</span>
+                        <span class="project-tag"><img src="./assets/typescript.png" alt="" class="skill-icon">TypeScript</span>
+
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/> <!-- View Details arrow -->
+                        </svg>
+                    </div>
                 </div>
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/soon.png" alt="Project 1" class="project-img">
+               <!-- Project Card 2 - Phishnet.AI -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="300" onclick="openProjectModal('phishnet-ai')">
+                <div class="project-card-background bg-gradient-4">
+                    <div class="project-logo-main">
+                        <img src="./assets/phishnet-ai.png" alt="Phishnet.AI Logo">
+                    </div>
                 </div>
-                <h2 class="experience-sub-title project-title"> AI Fitness Analyzer </h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://github.com/Ali-Aryo/AI-Gym-Rep-Analyzer'">
-                        GitHub
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Phishnet.AI</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag"><img src="./assets/python.png" alt="" class="skill-icon">Python</span>
+                        <span class="project-tag"><img src="./assets/machine_learning.png" alt="" class="skill-icon">Machine Learning</span>
+                        <span class="project-tag"><img src="./assets/python.png" alt="" class="skill-icon">Scikit-learn</span>
+                        <span class="project-tag"><img src="./assets/google.png" alt="" class="skill-icon">Google Colab</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+                 <!-- Project Card 3 - CSV RAG -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="300" onclick="openProjectModal('csv-rag')">
+                <div class="project-card-background bg-gradient-4">
+                    <div class="project-logo-main">
+                        <img src="./assets/csv_rag.png" alt="CSV RAG Logo">
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">CSV RAG</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag"><img src="./assets/python.png" alt="" class="skill-icon">Python</span>
+                        <span class="project-tag"><img src="./assets/ai.png" alt="" class="skill-icon">AI</span>
+                        <span class="project-tag"><img src="./assets/langchain.png" alt="" class="skill-icon">LangChain</span>
+                        <span class="project-tag"><img src="./assets/openai.png" alt="" class="skill-icon">LLM</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/> 
+                        </svg>
+                    </div>
+                </div>
+            </div>
+                      <!-- Project Card 4 - Portfolio Website -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="0" onclick="openProjectModal('portfolio-website')">
+                <div class="project-card-background bg-gradient-1">
+                    <div class="project-logo-main">
+                        <img src="./assets/profile-pic.png" alt="Mindful Memories Logo">
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Website Portfolio</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag"><img src="./assets/js.png" alt="" class="skill-icon">JavaScript</span>
+                        <span class="project-tag"><img src="./assets/html.png" alt="" class="skill-icon">HTML</span>
+                        <span class="project-tag"><img src="./assets/css-3.png" alt="" class="skill-icon">CSS</span>
+                        <span class="project-tag"><img src="./assets/canva.png" alt="" class="skill-icon">Canva</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0  24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+                        <!-- Project Card 5 - Mindful Memories -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="0" onclick="openProjectModal('mindful-memories')">
+                <div class="project-card-background bg-gradient-1">
+                    <div class="project-logo-main">
+                        <img src="./assets/mindful memories logo_edited.avif" alt="Mindful Memories Logo">
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Mindful Memories</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag"><img src="./assets/java.png" alt="" class="skill-icon">Java</span>
+                        <span class="project-tag"><img src="./assets/android.png" alt="" class="skill-icon">Android Studio</span>
+                        <span class="project-tag"><img src="./assets/firebase.png" alt="" class="skill-icon">Firebase</span>
+                        <span class="project-tag"><img src="./assets/canva.png" alt="" class="skill-icon">Canva</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 6 - Operating System in Rust -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="100" onclick="openProjectModal('rust-os')">
+                <div class="project-card-background bg-gradient-2">
+                    <div class="project-logo-main">
+                        <img src="./assets/Rust.png" alt="Rust OS Logo">
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Operating System in Rust</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag"><img src="./assets/rust.png" alt="" class="skill-icon">Rust</span>
+                        <span class="project-tag"><img src="./assets/integrated-system.png" alt="" class="skill-icon">Operating Systems</span>
+                        <span class="project-tag"><img src="./assets/stack.png" alt="" class="skill-icon">Memory Management</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>          
+        </div>
+
+        <!-- Project Modal -->
+        <div id="project-modal" class="modal-overlay" onclick="closeProjectModal()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <div class="modal-header">
+                    <h2 id="modal-title">Project Title</h2>
+                    <button class="modal-close" onclick="closeProjectModal()">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-images">
+                        <img id="modal-image" src="" alt="Project Screenshot">
+                        <!-- Additional screenshot images can be stacked here -->
+                        <div id="modal-screenshots" class="modal-screenshots"></div>
+                    </div>
+                    <div class="modal-description">
+                        <p id="modal-description">Project description will appear here.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="modal-github" class="modal-btn btn-github hvr-grow" onclick="">
+                        <span>GitHub</span>
                     </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.
-                    href='https://github.com/Ali-Aryo'">
-                        Coming Soon (Summer 2025)
+                    <button id="modal-demo" class="modal-btn btn-demo hvr-grow" onclick="">
+                        <span>Demo</span>
+                    </button>
+                    <button id="modal-info" class="modal-btn btn-info hvr-grow" onclick="">
+                        <span>Info</span>
                     </button>
                 </div>
             </div>
         </div>
-        </div>
-
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
-        onclick="location.href='./#contact'"
-        />
-
     </section>
 <!--Contact-->
     <section id="contact">
@@ -366,6 +344,12 @@
                 class="icon contact-icon">
                 <p><a href="https://www.linkedin.com/in/aoa25/">LinkedIn</a></p>
             </div>
+            <div class="contact-info-container">
+                <img src="./assets/gmail.png" 
+                alt="Gmail icon" 
+                class="icon contact-icon">
+                <p><a href="mailto:aliaryo2004@gmail.com">aliaryo2004@gmail.com</a></p>
+            </div>
         </div>
     </section>
 <!--Footer-->
@@ -373,7 +357,6 @@
         <nav>
             <div class="nav-links-container">
                 <ul class="nav-links">  <!-- Navigation tabs, can change later-->
-                    <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -384,6 +367,17 @@
         </nav>
         <p> Copyright &#169; 2024 Ali-Aryo Otufat-Shamsi. All Rights Reserved.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
