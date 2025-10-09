@@ -20,7 +20,7 @@
     }
     #hamburger-nav{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         padding: 0 2rem;
         align-items: center;
     }

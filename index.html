@@ -11,6 +11,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 
 
 </head>
@@ -21,13 +22,14 @@
 <body class="dark-mode"></body>
 <!--Desktop Navigation-->
     <nav id="desktop-nav">
-        <div class="logo">Ali-Aryo Otufat-Shamsi</div>  <!-- Change logo from my name to a logo of my choice-->
-        <div class="nav-right">
+        <div class="nav-center">
             <ul class="nav-links">  <!-- Navigation tabs, can change later-->
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+        </div>
+        <div class="nav-right">
             <div class="theme-toggle">
                 <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
                 <label for="theme-switch" class="theme-switch-label">
@@ -38,7 +40,6 @@
     </nav>
 <!--Hamburger Navigation-->
     <nav id ="hamburger-nav">
-    <div class="logo">Ali-Aryo Otufat-Shamsi</div>  <!-- Change logo from my name to a logo of my choice-->
      <div class="hamburger-right">
         <div class="theme-toggle">
             <input type="checkbox" id="theme-switch-mobile" class="theme-switch-checkbox">
@@ -68,9 +69,7 @@
             <img src="./assets/profile-pic.png" alt="Ali Profile Picture">  
          </div>
          <div class="section__text"> 
-            <p class="section__text__p1">Hello, I'm</p>  <!-- some home page text to edit later-->
-            <h1 class="title">Ali-Aryo Otufat-Shamsi</h1>
-            <p class="section__text__p2">4th Year Computure Engineering Student</p>
+            <p id="companionMethods"></p>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="window.open('./assets/Resume .pdf')"
                 >Download Resume</button>
@@ -94,16 +93,6 @@
                     alt="My GitHub Profile"
                     class="icon" 
                     onclick= "location.href = 'https://gitlab.com/aliaryo2004'">
-            </div>
-
-            <div class="typing-container">
-                <p class="typing-text">Welcome to my portfolio!
-                </p>
-            </div>
-
-            <div class="typing-container">
-                <p class="typing-text2">Take a look at my featured projects!
-                </p>
             </div>
 
         </div>
@@ -158,10 +147,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
-        onclick="location.href='./#projects'"
-        />
     </section>
 <!--Projects-->
     <section id="projects">
@@ -341,11 +326,6 @@
                 </div>
             </div>
         </div>
-
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
-        onclick="location.href='./#contact'"
-        />
-
     </section>
 <!--Contact-->
     <section id="contact">

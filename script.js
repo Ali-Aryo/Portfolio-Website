@@ -120,7 +120,7 @@ function initializeParticles() {
             }
         },
         interactivity: {
-            detect_on: "canvas",
+            detect_on: "window",
             events: {
                 onhover: { enable: true, mode: "repulse" },
                 onclick: { enable: true, mode: "push" },
@@ -261,4 +261,36 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize particles
     initializeParticles();
+    
+    // Initialize TypeIt typing animation
+    new TypeIt("#companionMethods", {
+        speed: 70,
+        startdelay: 500,
+        loop: true,
+        cursor: {
+            character: "|",
+        },
+    })
+    .type("Hello, my nsme", { delay: 200 })
+    .move(-2)
+    .delete(1)
+    .type("a")
+    .move(null, { to: "END" })
+    .type(" is Ali!", { delay: 1000 })
+    .delete()
+    .type("Welcome to my prtfolio.", { delay: 200 })
+    .move(-8, {instant: true})
+    .type('o', { delay: 500 })
+    .move(null, { to: "END" , delay: 100})
+    .delete()
+    .type("I am a 4th year Computer Engineering student.", { delay: 1000 })
+    .delete()
+    .type("Take a look at my projects.", { delay: 500 })
+    .move(-26, {instant: true, delay: 200})
+    .delete(1, { delay: 350 })
+    .type(" t", { delay: 200 })
+    .move(-2)
+    .type('<em><strong class="font-semibold">Please,</strong></em>', {speed: 100, delay: 350})
+    .move(null, { to: "END", instant: true, delay: 1000 })
+    .go();
 });
