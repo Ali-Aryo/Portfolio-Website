@@ -143,7 +143,7 @@ const projectData = {
     'steadyscript': {
         title: 'SteadyScript',
         description: '\u{1F3C6} Best Wellness Related Hack [PCCA] & Best Beginner Project \u2014 nwHacks 2026\n\nA biofeedback pen and web application that provides real-time guidance through exercises to help users improve hand steadiness and motor control. Uses computer vision (OpenCV) to track pen movement and a custom lateral jitter algorithm to distinguish intentional movement from involuntary tremor. Features include a Tremor Baseline Test with LED feedback and a Mobility Test with drawing exercises, concluding with performance summaries and progress tracking over time.',
-        image: './assets/steadyscript.svg',
+        image: './assets/Steadyscript.svg',
         github: 'https://github.com/SteadyScript/SteadyScript',
         demo: '',
         info: 'https://devpost.com/software/steadyscript'
