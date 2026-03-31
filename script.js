@@ -140,6 +140,22 @@ function initializeParticles() {
 
 // Project Modal Functionality
 const projectData = {
+    'steadyscript': {
+        title: 'SteadyScript',
+        description: '\u{1F3C6} Best Wellness Related Hack [PCCA] & Best Beginner Project \u2014 nwHacks 2026\n\nA biofeedback pen and web application that provides real-time guidance through exercises to help users improve hand steadiness and motor control. Uses computer vision (OpenCV) to track pen movement and a custom lateral jitter algorithm to distinguish intentional movement from involuntary tremor. Features include a Tremor Baseline Test with LED feedback and a Mobility Test with drawing exercises, concluding with performance summaries and progress tracking over time.',
+        image: './assets/steadyscript.svg',
+        github: 'https://github.com/SteadyScript/SteadyScript',
+        demo: '',
+        info: 'https://devpost.com/software/steadyscript'
+    },
+    'therassist': {
+        title: 'Therassist',
+        description: 'Built at the Technation \u2014 AI at the Edge of Innovations hackathon.\n\nA therapy screening application integrating real-time emotion detection and speech-to-text transcription to support therapist analysis of patient sessions. Uses DeepFace for facial emotion analysis via webcam, OpenAI Whisper for local audio transcription, and generates AI-powered clinical reports through TELUS Sovereign AI Factory. Features WebSocket-enabled live emotion streaming, session-based tracking correlated with specific questions, and privacy-focused local processing.',
+        image: './assets/Thereasist.png',
+        github: 'https://github.com/Therassist-AI/Therassist',
+        demo: 'https://www.youtube.com/watch?v=oBSS91ltZRQ&feature=youtu.be',
+        info: ''
+    },
     'mindful-memories': {
         title: 'Mindful Memories',
         description: 'Designed and developed an Android application that facilitates reminiscence therapy for individuals with dementia and their caregivers. This solution effectively enhances cognitive engagement and significantly improves their overall quality of life.',

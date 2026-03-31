@@ -74,9 +74,12 @@
   .menu-links {
     background-color: var(--light-bg, white);
     border-radius: 1rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    padding: 1rem 0;
     min-width: 200px;
+  }
+
+  .menu-links.open {
+    padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   }
   
   .menu-links a {
