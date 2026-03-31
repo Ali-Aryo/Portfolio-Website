@@ -83,10 +83,10 @@
                     alt="My LinkedIn profile"
                     class="icon" 
                     onclick="location.href='https://linkedin.com/'"> <!-- add my own linked in profile url here-->
-                <img 
-                    src="./assets/github.png" 
+                <img
+                    src="./assets/github.png"
                     alt="My GitHub Profile"
-                    class="icon" 
+                    class="icon github-icon"
                     onclick= "location.href = 'https://github.com/Ali-Aryo'">
                 <img 
                     src="./assets/gitlab.png" 
@@ -131,7 +131,7 @@
             <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                    <div class="timeline-date">Sep '22  - Present</div>
+                    <div class="timeline-date">Sep '22 - Dec '25</div>
                     <h3 class="timeline-title">Firmware Developer</h3>
                     <p class="timeline-company">SFU Robot Soccer Club</p>
                     <ul class="timeline-description">
@@ -154,7 +154,56 @@
         <h1 class="title">Projects</h1>
         <div class="projects-container">
 
-              <!-- Project Card 1 - AI Fitness Analyzer -->
+              <!-- Project Card 1 - SteadyScript (nwHacks 2026) -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="0" onclick="openProjectModal('steadyscript')">
+                <span class="hackathon-badge">Hackathon Winner</span>
+                <div class="project-card-background bg-gradient-1">
+                    <div class="project-logo-main">
+                        <img src="./assets/Steadyscript.svg" alt="SteadyScript Logo">
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">SteadyScript</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag"><img src="./assets/python.png" alt="" class="skill-icon">Python</span>
+                        <span class="project-tag"><img src="./assets/react.png" alt="" class="skill-icon">React</span>
+                        <span class="project-tag"><img src="./assets/typescript.png" alt="" class="skill-icon">TypeScript</span>
+                        <span class="project-tag"><img src="./assets/ai.png" alt="" class="skill-icon">OpenCV</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Project Card 2 - Therassist (Technation Hackathon) -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="100" onclick="openProjectModal('therassist')">
+                <div class="project-card-background bg-gradient-4">
+                    <div class="project-logo-main">
+                        <img src="./assets/Thereasist.png" alt="Therassist Logo">
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Therassist</h3>
+                    <div class="project-card-tags">
+                        <span class="project-tag"><img src="./assets/python.png" alt="" class="skill-icon">Python</span>
+                        <span class="project-tag"><img src="./assets/react.png" alt="" class="skill-icon">Next.js</span>
+                        <span class="project-tag"><img src="./assets/typescript.png" alt="" class="skill-icon">TypeScript</span>
+                        <span class="project-tag"><img src="./assets/ai.png" alt="" class="skill-icon">DeepFace</span>
+                    </div>
+                    <div class="project-card-footer">
+                        <span class="view-details-text">View Details</span>
+                        <svg class="view-details-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Project Card 3 - AI Fitness Analyzer -->
             <div class="project-card" data-aos="fade-left" data-aos-delay="200" onclick="openProjectModal('ai-fitness')">
                 <div class="project-card-background bg-gradient-3">
                     <div class="project-logo-main">
@@ -178,8 +227,8 @@
                     </div>
                 </div>
             </div>
-               <!-- Project Card 2 - Phishnet.AI -->
-            <div class="project-card" data-aos="fade-left" data-aos-delay="300" onclick="openProjectModal('phishnet-ai')">
+               <!-- Project Card 3 - Phishnet.AI -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="200" onclick="openProjectModal('phishnet-ai')">
                 <div class="project-card-background bg-gradient-4">
                     <div class="project-logo-main">
                         <img src="./assets/phishnet-ai.png" alt="Phishnet.AI Logo">
@@ -248,8 +297,8 @@
                     </div>
                 </div>
             </div>
-                        <!-- Project Card 5 - Mindful Memories -->
-            <div class="project-card" data-aos="fade-left" data-aos-delay="0" onclick="openProjectModal('mindful-memories')">
+                        <!-- Project Card 6 - Mindful Memories -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="100" onclick="openProjectModal('mindful-memories')">
                 <div class="project-card-background bg-gradient-1">
                     <div class="project-logo-main">
                         <img src="./assets/mindful memories logo_edited.avif" alt="Mindful Memories Logo">
@@ -272,8 +321,8 @@
                 </div>
             </div>
 
-            <!-- Project Card 6 - Operating System in Rust -->
-            <div class="project-card" data-aos="fade-left" data-aos-delay="100" onclick="openProjectModal('rust-os')">
+            <!-- Project Card 7 - Operating System in Rust -->
+            <div class="project-card" data-aos="fade-left" data-aos-delay="200" onclick="openProjectModal('rust-os')">
                 <div class="project-card-background bg-gradient-2">
                     <div class="project-logo-main">
                         <img src="./assets/Rust.png" alt="Rust OS Logo">
@@ -365,7 +414,7 @@
             </ul>
             </div>
         </nav>
-        <p> Copyright &#169; 2024 Ali-Aryo Otufat-Shamsi. All Rights Reserved.</p>
+        <p> Copyright &#169; 2026 Ali-Aryo Otufat-Shamsi. All Rights Reserved.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
